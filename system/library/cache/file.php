@@ -55,13 +55,13 @@ class File {
 	 * @return void
 	 */
 	public function set(string $key, $value, int $expire = 0): void {
-		$this->delete($key);
+		// $this->delete($key);
 
-		if (!$expire) {
-			$expire = $this->expire;
-		}
+		// if (!$expire) {
+		// 	$expire = $this->expire;
+		// }
 
-		file_put_contents(DIR_CACHE . 'cache.' . preg_replace('/[^A-Z0-9\._-]/i', '', $key) . '.' . (time() + $expire), json_encode($value));
+		// file_put_contents(DIR_CACHE . 'cache.' . preg_replace('/[^A-Z0-9\._-]/i', '', $key) . '.' . (time() + $expire), json_encode($value));
 	}
 
 	/**

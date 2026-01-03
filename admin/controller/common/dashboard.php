@@ -14,6 +14,7 @@ class Dashboard extends \Opencart\System\Engine\Controller {
 	 * @return void
 	 */
 	public function index(): void {
+		
 		$this->load->language('common/dashboard');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -90,7 +91,7 @@ class Dashboard extends \Opencart\System\Engine\Controller {
 			$data['developer_status'] = false;
 		}
 
-		$data['security'] = $this->load->controller('common/security');
+		//$data['security'] = $this->load->controller('common/security');
 
 		$data['user_token'] = $this->session->data['user_token'];
 

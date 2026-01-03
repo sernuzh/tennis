@@ -1,0 +1,154 @@
+2026-01-01 15:13:02 - Error: Error: Table 'tennis.te_setting' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `te_setting` WHERE `store_id` = '0' OR `store_id` = '0' ORDER BY `store_id` ASC
+File: /var/www/tennis/system/library/db/mysqli.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/db.php
+Line: 54
+Class: Opencart\System\Library\DB\MySQLi
+Function: query
+
+Backtrace: 1
+File: /var/www/tennis/admin/model/setting/setting.php
+Line: 27
+Class: Opencart\System\Library\DB
+Function: query
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Setting\Setting
+Function: getSettings
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: /var/www/tennis/admin/controller/startup/setting.php
+Line: 18
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Startup\Setting
+Function: index
+
+Backtrace: 6
+File: /var/www/tennis/system/framework.php
+Line: 208
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 7
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-01-01 15:26:18 - Error: <b>Notice</b>:  Undefined property: Proxy::getTotalZoneToGeoZoneByCountryId in <b>/var/www/tennis/admin/controller/localisation/country.php</b> on line <b>475</b>
+File: /var/www/tennis/system/engine/proxy.php
+Line: 91
+
+Backtrace: 0
+File: /var/www/tennis/admin/controller/localisation/country.php
+Line: 475
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Localisation\Country
+Function: delete
+
+Backtrace: 2
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-01-01 15:26:31 - Error: <b>Notice</b>:  Undefined property: Proxy::getTotalZoneToGeoZoneByCountryId in <b>/var/www/tennis/admin/controller/localisation/country.php</b> on line <b>475</b>
+File: /var/www/tennis/system/engine/proxy.php
+Line: 91
+
+Backtrace: 0
+File: /var/www/tennis/admin/controller/localisation/country.php
+Line: 475
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Localisation\Country
+Function: delete
+
+Backtrace: 2
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-01-01 15:26:44 - Error: <b>Notice</b>:  Undefined property: Proxy::getTotalZoneToGeoZoneByCountryId in <b>/var/www/tennis/admin/controller/localisation/country.php</b> on line <b>475</b>
+File: /var/www/tennis/system/engine/proxy.php
+Line: 91
+
+Backtrace: 0
+File: /var/www/tennis/admin/controller/localisation/country.php
+Line: 475
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Localisation\Country
+Function: delete
+
+Backtrace: 2
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-01-01 15:27:02 - Error: <b>Notice</b>:  Undefined property: Proxy::getTotalZoneToGeoZoneByZoneId in <b>/var/www/tennis/admin/controller/localisation/zone.php</b> on line <b>453</b>
+File: /var/www/tennis/system/engine/proxy.php
+Line: 91
+
+Backtrace: 0
+File: /var/www/tennis/admin/controller/localisation/zone.php
+Line: 453
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Localisation\Zone
+Function: delete
+
+Backtrace: 2
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 3
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once

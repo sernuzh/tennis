@@ -106,8 +106,9 @@ class Twig {
 				'charset'     => 'utf-8',
 				'autoescape'  => false,
 				'debug'       => true,
-				'auto_reload' => true,
-				'cache'       => DIR_CACHE . 'template/'
+				'auto_reload' => true
+
+				//'cache'       => DIR_CACHE . 'template/'
 			];
 
 			$twig = new \Twig\Environment($loader, $config);
