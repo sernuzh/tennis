@@ -18,5 +18,9 @@
 							Ми на карті
 Новини
 
+Поставити свій контент на головну сторінку сайту
+1 - Extensions - Extensions - Modules - HTML Content - створити свій модуль з текстом головної сторінки
+2 - Design - Layouts - Home - Content Top - додати створений модуль
+
 
 

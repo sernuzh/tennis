@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 03, 2026 at 10:45 PM
+-- Generation Time: Jan 12, 2026 at 10:19 PM
 -- Server version: 8.0.44-0ubuntu0.22.04.2
 -- PHP Version: 8.1.2-1ubuntu2.22
 
@@ -1661,14 +1661,14 @@ CREATE TABLE `te_currency` (
 --
 
 INSERT INTO `te_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', 2, 0.74387851, 1, '2026-01-03 20:34:00'),
-(2, 'US Dollar', 'USD', '$', '', 2, 1.00000000, 1, '2026-01-03 20:34:00'),
-(3, 'Euro', 'EUR', '', '€', 2, 0.85316952, 1, '2026-01-03 20:34:00'),
-(4, 'Hong Kong Dollar', 'HKD', 'HK$', '', 2, 7.79191195, 0, '2026-01-03 20:34:00'),
-(5, 'Indian Rupee', 'INR', '₹', '', 2, 90.19622899, 0, '2026-01-03 20:34:00'),
+(1, 'Pound Sterling', 'GBP', '£', '', 2, 0.74187479, 1, '2026-01-12 20:16:47'),
+(2, 'US Dollar', 'USD', '$', '', 2, 1.00000000, 1, '2026-01-12 20:16:47'),
+(3, 'Euro', 'EUR', '', '€', 2, 0.85528567, 1, '2026-01-12 20:16:47'),
+(4, 'Hong Kong Dollar', 'HKD', 'HK$', '', 2, 7.79644201, 0, '2026-01-12 20:16:47'),
+(5, 'Indian Rupee', 'INR', '₹', '', 2, 90.16335956, 0, '2026-01-12 20:16:47'),
 (6, 'Russian Ruble', 'RUB', '', '₽', 2, 56.40360000, 0, '2018-02-16 12:00:00'),
-(7, 'Chinese Yuan Renminbi', 'CNY', '¥', '', 2, 6.99368655, 0, '2026-01-03 20:34:00'),
-(8, 'Australian Dollar', 'AUD', '$', '', 2, 1.49372920, 0, '2026-01-03 20:34:00');
+(7, 'Chinese Yuan Renminbi', 'CNY', '¥', '', 2, 6.97305850, 0, '2026-01-12 20:16:47'),
+(8, 'Australian Dollar', 'AUD', '$', '', 2, 1.48896681, 0, '2026-01-12 20:16:47');
 
 -- --------------------------------------------------------
 
@@ -2415,7 +2415,8 @@ INSERT INTO `te_extension` (`extension_id`, `extension`, `type`, `code`) VALUES
 (39, 'opencart', 'report', 'customer_reward'),
 (40, 'opencart', 'report', 'marketing'),
 (41, 'opencart', 'report', 'subscription'),
-(42, 'opencart', 'report', 'customer');
+(42, 'opencart', 'report', 'customer'),
+(43, 'opencart', 'module', 'html');
 
 -- --------------------------------------------------------
 
@@ -3133,12 +3134,10 @@ CREATE TABLE `te_layout_module` (
 INSERT INTO `te_layout_module` (`layout_module_id`, `layout_id`, `code`, `position`, `sort_order`) VALUES
 (1, 10, 'opencart.account', 'column_right', 1),
 (2, 6, 'opencart.account', 'column_right', 1),
-(3, 1, 'opencart.featured.2', 'content_top', 2),
 (4, 3, 'opencart.banner.1', 'column_left', 2),
-(5, 1, 'opencart.banner.3', 'content_top', 1),
-(6, 1, 'opencart.banner.4', 'content_bottom', 1),
 (7, 3, 'opencart.category', 'column_left', 1),
-(8, 14, 'opencart.topic', 'column_left', 1);
+(8, 14, 'opencart.topic', 'column_left', 1),
+(11, 1, 'opencart.html.5', 'content_top', 0);
 
 -- --------------------------------------------------------
 
@@ -3162,7 +3161,6 @@ INSERT INTO `te_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (2, 6, 0, 'information/gdpr'),
 (3, 10, 0, 'affiliate/%'),
 (4, 3, 0, 'product/category'),
-(5, 1, 0, 'common/home'),
 (6, 2, 0, 'product/product'),
 (7, 11, 0, 'information/information'),
 (8, 7, 0, 'checkout/%'),
@@ -3173,7 +3171,8 @@ INSERT INTO `te_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (13, 12, 0, 'product/compare'),
 (14, 13, 0, 'product/search'),
 (15, 14, 0, 'cms/blog'),
-(16, 14, 0, 'cms/blog.info');
+(16, 14, 0, 'cms/blog.info'),
+(20, 1, 0, 'common/home');
 
 -- --------------------------------------------------------
 
@@ -3368,7 +3367,8 @@ INSERT INTO `te_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (1, 'Category Banner', 'opencart.banner', '{\"name\":\"Category Banner\",\"banner_id\":\"6\",\"effect\":\"fade\",\"items\":\"1\",\"controls\":\"0\",\"indicators\":\"0\",\"interval\":\"5000\",\"width\":\"200\",\"height\":\"180\",\"status\":\"1\"}'),
 (2, 'Featured', 'opencart.featured', '{\"name\":\"Featured\",\"product_name\":\"\",\"product\":[\"43\",\"40\",\"42\",\"30\"],\"axis\":\"horizontal\",\"limit\":\"4\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\"}'),
 (3, 'Homepage Slideshow', 'opencart.banner', '{\"name\":\"Homepage Slideshow\",\"banner_id\":\"7\",\"effect\":\"slide\",\"items\":\"1\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\"}'),
-(4, 'Homepage Manufacturers', 'opencart.banner', '{\"name\":\"Homepage Manufacturers\",\"banner_id\":\"8\",\"effect\":\"slide\",\"items\":\"5\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}');
+(4, 'Homepage Manufacturers', 'opencart.banner', '{\"name\":\"Homepage Manufacturers\",\"banner_id\":\"8\",\"effect\":\"slide\",\"items\":\"5\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
+(5, 'Тернопільський тенісний клуб - ХАРД', 'opencart.html', '{\"name\":\"\\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u0456\\u043b\\u044c\\u0441\\u044c\\u043a\\u0438\\u0439 \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u0438\\u0439 \\u043a\\u043b\\u0443\\u0431 - \\u0425\\u0410\\u0420\\u0414\",\"module_description\":{\"2\":{\"title\":\"\\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u0456\\u043b\\u044c\\u0441\\u044c\\u043a\\u0438\\u0439 \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u0438\\u0439 \\u043a\\u043b\\u0443\\u0431 - \\u0425\\u0410\\u0420\\u0414\",\"description\":\"&lt;div class=&quot;flex max-w-full flex-col grow&quot;&gt;\\r\\n&lt;div class=&quot;min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;amp;]:mt-1&quot; data-message-author-role=&quot;assistant&quot; data-message-id=&quot;19a81c29-82e8-48e8-a90d-958ff5f36f62&quot; data-message-model-slug=&quot;gpt-5-2&quot; dir=&quot;auto&quot;&gt;\\r\\n&lt;div class=&quot;flex w-full flex-col gap-1 empty:hidden first:pt-[1px]&quot;&gt;\\r\\n&lt;div class=&quot;markdown prose dark:prose-invert w-full break-words light markdown-new-styling&quot;&gt;\\r\\n&lt;p data-end=&quot;401&quot; data-start=&quot;179&quot;&gt;&lt;strong data-end=&quot;187&quot; data-start=&quot;179&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt; \\u2014 \\u0446\\u0435 \\u0441\\u0443\\u0447\\u0430\\u0441\\u043d\\u0438\\u0439 \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u0438\\u0439 \\u043a\\u043b\\u0443\\u0431 \\u0443 \\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u043e\\u043b\\u0456 \\u0434\\u043b\\u044f \\u0434\\u0456\\u0442\\u0435\\u0439 \\u0456 \\u0434\\u043e\\u0440\\u043e\\u0441\\u043b\\u0438\\u0445, \\u043d\\u043e\\u0432\\u0430\\u0447\\u043a\\u0456\\u0432 \\u0442\\u0430 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0447\\u0435\\u043d\\u0438\\u0445 \\u0433\\u0440\\u0430\\u0432\\u0446\\u0456\\u0432. \\u041c\\u0438 \\u0441\\u0442\\u0432\\u043e\\u0440\\u0438\\u043b\\u0438 \\u043f\\u0440\\u043e\\u0441\\u0442\\u0456\\u0440, \\u0434\\u0435 \\u0442\\u0435\\u043d\\u0456\\u0441 \\u2014 \\u0446\\u0435 \\u043d\\u0435 \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u0441\\u043f\\u043e\\u0440\\u0442, \\u0430 \\u0441\\u0442\\u0438\\u043b\\u044c \\u0436\\u0438\\u0442\\u0442\\u044f, \\u0440\\u043e\\u0437\\u0432\\u0438\\u0442\\u043e\\u043a \\u0445\\u0430\\u0440\\u0430\\u043a\\u0442\\u0435\\u0440\\u0443 \\u0442\\u0430 \\u0441\\u043f\\u0440\\u0430\\u0432\\u0436\\u043d\\u0454 \\u0437\\u0430\\u0434\\u043e\\u0432\\u043e\\u043b\\u0435\\u043d\\u043d\\u044f \\u0432\\u0456\\u0434 \\u0433\\u0440\\u0438.&lt;\\/p&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;424&quot; data-start=&quot;403&quot;&gt;\\u0414\\u043b\\u044f \\u043a\\u043e\\u0433\\u043e \\u043d\\u0430\\u0448 \\u043a\\u043b\\u0443\\u0431&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;576&quot; data-start=&quot;425&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;448&quot; data-start=&quot;425&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;448&quot; data-start=&quot;427&quot;&gt;\\ud83c\\udfbe \\u0414\\u0456\\u0442\\u0438 \\u0432\\u0456\\u0434 5 \\u0440\\u043e\\u043a\\u0456\\u0432&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;478&quot; data-start=&quot;449&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;478&quot; data-start=&quot;451&quot;&gt;\\ud83c\\udfbe \\u041f\\u043e\\u0447\\u0430\\u0442\\u043a\\u0456\\u0432\\u0446\\u0456 \\u0431\\u0435\\u0437 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0443&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;514&quot; data-start=&quot;479&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;514&quot; data-start=&quot;481&quot;&gt;\\ud83c\\udfbe \\u0410\\u043c\\u0430\\u0442\\u043e\\u0440\\u0438 \\u0442\\u0430 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0447\\u0435\\u043d\\u0456 \\u0433\\u0440\\u0430\\u0432\\u0446\\u0456&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;576&quot; data-start=&quot;515&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;576&quot; data-start=&quot;517&quot;&gt;\\ud83c\\udfbe \\u0422\\u0456, \\u0445\\u0442\\u043e \\u0445\\u043e\\u0447\\u0435 \\u043f\\u0456\\u0434\\u0442\\u0440\\u0438\\u043c\\u0443\\u0432\\u0430\\u0442\\u0438 \\u0444\\u043e\\u0440\\u043c\\u0443 \\u0442\\u0430 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e \\u043f\\u0440\\u043e\\u0432\\u043e\\u0434\\u0438\\u0442\\u0438 \\u0447\\u0430\\u0441&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;598&quot; data-start=&quot;578&quot;&gt;\\u0429\\u043e \\u043c\\u0438 \\u043f\\u0440\\u043e\\u043f\\u043e\\u043d\\u0443\\u0454\\u043c\\u043e&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;789&quot; data-start=&quot;599&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;638&quot; data-start=&quot;599&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;638&quot; data-start=&quot;601&quot;&gt;\\u0406\\u043d\\u0434\\u0438\\u0432\\u0456\\u0434\\u0443\\u0430\\u043b\\u044c\\u043d\\u0456 \\u0442\\u0430 \\u0433\\u0440\\u0443\\u043f\\u043e\\u0432\\u0456 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;674&quot; data-start=&quot;639&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;674&quot; data-start=&quot;641&quot;&gt;\\u041f\\u0440\\u043e\\u0444\\u0435\\u0441\\u0456\\u0439\\u043d\\u0438\\u0445 \\u0442\\u0440\\u0435\\u043d\\u0435\\u0440\\u0456\\u0432 \\u0437 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u043e\\u043c&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;718&quot; data-start=&quot;675&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;718&quot; data-start=&quot;677&quot;&gt;\\u041d\\u0430\\u0432\\u0447\\u0430\\u043d\\u043d\\u044f \\u0437 \\u043d\\u0443\\u043b\\u044f \\u0442\\u0430 \\u043f\\u0456\\u0434\\u0432\\u0438\\u0449\\u0435\\u043d\\u043d\\u044f \\u0440\\u0456\\u0432\\u043d\\u044f \\u0433\\u0440\\u0438&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;752&quot; data-start=&quot;719&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;752&quot; data-start=&quot;721&quot;&gt;\\u0414\\u0440\\u0443\\u0436\\u043d\\u044e \\u0430\\u0442\\u043c\\u043e\\u0441\\u0444\\u0435\\u0440\\u0443 \\u0442\\u0430 \\u043c\\u043e\\u0442\\u0438\\u0432\\u0430\\u0446\\u0456\\u044e&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;789&quot; data-start=&quot;753&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;789&quot; data-start=&quot;755&quot;&gt;\\u041f\\u0456\\u0434\\u0433\\u043e\\u0442\\u043e\\u0432\\u043a\\u0443 \\u0434\\u043e \\u0442\\u0443\\u0440\\u043d\\u0456\\u0440\\u0456\\u0432 \\u0456 \\u0437\\u043c\\u0430\\u0433\\u0430\\u043d\\u044c&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;813&quot; data-start=&quot;791&quot;&gt;\\u0427\\u043e\\u043c\\u0443 \\u0441\\u0430\\u043c\\u0435 &lt;strong data-end=&quot;813&quot; data-start=&quot;805&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt;&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;973&quot; data-start=&quot;814&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;842&quot; data-start=&quot;814&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;842&quot; data-start=&quot;816&quot;&gt;\\u042f\\u043a\\u0456\\u0441\\u043d\\u0456 \\u043a\\u043e\\u0440\\u0442\\u0438 \\u0442\\u0430 \\u0456\\u043d\\u0432\\u0435\\u043d\\u0442\\u0430\\u0440&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;886&quot; data-start=&quot;843&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;886&quot; data-start=&quot;845&quot;&gt;\\u0406\\u043d\\u0434\\u0438\\u0432\\u0456\\u0434\\u0443\\u0430\\u043b\\u044c\\u043d\\u0438\\u0439 \\u043f\\u0456\\u0434\\u0445\\u0456\\u0434 \\u0434\\u043e \\u043a\\u043e\\u0436\\u043d\\u043e\\u0433\\u043e \\u0433\\u0440\\u0430\\u0432\\u0446\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;923&quot; data-start=&quot;887&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;923&quot; data-start=&quot;889&quot;&gt;\\u0411\\u0435\\u0437\\u043f\\u0435\\u0447\\u043d\\u0456 \\u0442\\u0430 \\u0435\\u0444\\u0435\\u043a\\u0442\\u0438\\u0432\\u043d\\u0456 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;973&quot; data-start=&quot;924&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;973&quot; data-start=&quot;926&quot;&gt;\\u0420\\u0435\\u0430\\u043b\\u044c\\u043d\\u0438\\u0439 \\u043f\\u0440\\u043e\\u0433\\u0440\\u0435\\u0441 \\u0456 \\u0437\\u0430\\u0434\\u043e\\u0432\\u043e\\u043b\\u0435\\u043d\\u043d\\u044f \\u0432\\u0456\\u0434 \\u0440\\u0435\\u0437\\u0443\\u043b\\u044c\\u0442\\u0430\\u0442\\u0443&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;1003&quot; data-start=&quot;975&quot;&gt;\\u041f\\u043e\\u0447\\u043d\\u0438 \\u0433\\u0440\\u0430\\u0442\\u0438 \\u0432\\u0436\\u0435 \\u0441\\u044c\\u043e\\u0433\\u043e\\u0434\\u043d\\u0456&lt;\\/h3&gt;\\r\\n\\r\\n&lt;p data-end=&quot;1161&quot; data-start=&quot;1004&quot;&gt;\\u0422\\u0435\\u043d\\u0456\\u0441 \\u2014 \\u0446\\u0435 \\u0441\\u0438\\u043b\\u0430, \\u0432\\u0438\\u0442\\u0440\\u0438\\u0432\\u0430\\u043b\\u0456\\u0441\\u0442\\u044c, \\u043a\\u043e\\u043d\\u0446\\u0435\\u043d\\u0442\\u0440\\u0430\\u0446\\u0456\\u044f \\u0442\\u0430 \\u0432\\u043f\\u0435\\u0432\\u043d\\u0435\\u043d\\u0456\\u0441\\u0442\\u044c \\u0443 \\u0441\\u043e\\u0431\\u0456.&lt;br data-end=&quot;1073&quot; data-start=&quot;1070&quot; \\/&gt;\\r\\n\\u041f\\u0440\\u0438\\u0454\\u0434\\u043d\\u0443\\u0439\\u0441\\u044f \\u0434\\u043e \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u043e\\u0433\\u043e \\u043a\\u043b\\u0443\\u0431\\u0443 &lt;strong data-end=&quot;1111&quot; data-start=&quot;1103&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt; \\u0443 \\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u043e\\u043b\\u0456 \\u0442\\u0430 \\u0432\\u0456\\u0434\\u043a\\u0440\\u0438\\u0439 \\u0434\\u043b\\u044f \\u0441\\u0435\\u0431\\u0435 \\u043d\\u043e\\u0432\\u0438\\u0439 \\u0440\\u0456\\u0432\\u0435\\u043d\\u044c \\u0433\\u0440\\u0438.&lt;\\/p&gt;\\r\\n\\r\\n&lt;p data-end=&quot;1208&quot; data-start=&quot;1163&quot;&gt;&lt;strong data-end=&quot;1208&quot; data-start=&quot;1163&quot;&gt;\\u0417\\u0430\\u043f\\u0438\\u0448\\u0438\\u0441\\u044c \\u043d\\u0430 \\u043f\\u0435\\u0440\\u0448\\u0435 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f \\u043f\\u0440\\u044f\\u043c\\u043e \\u0437\\u0430\\u0440\\u0430\\u0437!&lt;\\/strong&gt;&lt;\\/p&gt;\\r\\n\\r\\n&lt;hr data-end=&quot;1213&quot; data-start=&quot;1210&quot; \\/&gt;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;z-0 flex min-h-[46px] justify-start&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;relative basis-auto flex-col -mb-(--composer-overlap-px) [--composer-overlap-px:55px] grow flex&quot;&gt;\\r\\n&lt;div class=&quot;flex flex-col text-sm pb-25&quot;&gt;\\r\\n&lt;article class=&quot;text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;amp;:has([data-writing-block])&amp;gt;*]:pointer-events-auto [content-visibility:auto] supports-[content-visibility:auto]:[contain-intrinsic-size:auto_100lvh] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]&quot; data-scroll-anchor=&quot;true&quot; data-testid=&quot;conversation-turn-2&quot; data-turn=&quot;assistant&quot; data-turn-id=&quot;2d24c563-cf78-49df-ad3f-ddfa3c3e76ca&quot; dir=&quot;auto&quot; tabindex=&quot;-1&quot;&gt;\\r\\n&lt;div class=&quot;text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm\\/main:[--thread-content-margin:--spacing(6)] @w-lg\\/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)&quot;&gt;\\r\\n&lt;div class=&quot;[--thread-content-max-width:40rem] @w-lg\\/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group\\/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn&quot; tabindex=&quot;-1&quot;&gt;\\r\\n&lt;div class=&quot;mt-3 w-full empty:hidden&quot;&gt;\\r\\n&lt;div class=&quot;text-center&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/article&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div aria-hidden=&quot;true&quot; class=&quot;pointer-events-none h-px w-px absolute bottom-0&quot; data-edge=&quot;true&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;sticky bottom-0 group\\/thread-bottom-container relative isolate z-10 w-full basis-auto has-data-has-thread-error:pt-2 has-data-has-thread-error:[box-shadow:var(--sharp-edge-bottom-shadow)] md:border-transparent md:pt-0 dark:border-white\\/20 md:dark:border-transparent print:hidden content-fade flex flex-col&quot; id=&quot;thread-bottom-container&quot;&gt;\\r\\n&lt;div class=&quot;relative h-0&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;text-base mx-auto [--thread-content-margin:--spacing(4)] @w-sm\\/main:[--thread-content-margin:--spacing(6)] @w-lg\\/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)&quot;&gt;\\r\\n&lt;div class=&quot;[--thread-content-max-width:40rem] @w-lg\\/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 mb-4&quot;&gt;\\r\\n&lt;div class=&quot;flex justify-center empty:hidden&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;pointer-events-auto relative z-1 flex h-(--composer-container-height,100%) max-w-full flex-(--composer-container-flex,1) flex-col&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"},\"1\":{\"title\":\"\\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u0456\\u043b\\u044c\\u0441\\u044c\\u043a\\u0438\\u0439 \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u0438\\u0439 \\u043a\\u043b\\u0443\\u0431 - \\u0425\\u0410\\u0420\\u0414\",\"description\":\"&lt;div class=&quot;flex max-w-full flex-col grow&quot;&gt;\\r\\n&lt;div class=&quot;min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;amp;]:mt-1&quot; data-message-author-role=&quot;assistant&quot; data-message-id=&quot;19a81c29-82e8-48e8-a90d-958ff5f36f62&quot; data-message-model-slug=&quot;gpt-5-2&quot; dir=&quot;auto&quot;&gt;\\r\\n&lt;div class=&quot;flex w-full flex-col gap-1 empty:hidden first:pt-[1px]&quot;&gt;\\r\\n&lt;div class=&quot;markdown prose dark:prose-invert w-full break-words light markdown-new-styling&quot;&gt;\\r\\n&lt;p data-end=&quot;401&quot; data-start=&quot;179&quot;&gt;&lt;strong data-end=&quot;187&quot; data-start=&quot;179&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt; \\u2014 \\u0446\\u0435 \\u0441\\u0443\\u0447\\u0430\\u0441\\u043d\\u0438\\u0439 \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u0438\\u0439 \\u043a\\u043b\\u0443\\u0431 \\u0443 \\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u043e\\u043b\\u0456 \\u0434\\u043b\\u044f \\u0434\\u0456\\u0442\\u0435\\u0439 \\u0456 \\u0434\\u043e\\u0440\\u043e\\u0441\\u043b\\u0438\\u0445, \\u043d\\u043e\\u0432\\u0430\\u0447\\u043a\\u0456\\u0432 \\u0442\\u0430 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0447\\u0435\\u043d\\u0438\\u0445 \\u0433\\u0440\\u0430\\u0432\\u0446\\u0456\\u0432. \\u041c\\u0438 \\u0441\\u0442\\u0432\\u043e\\u0440\\u0438\\u043b\\u0438 \\u043f\\u0440\\u043e\\u0441\\u0442\\u0456\\u0440, \\u0434\\u0435 \\u0442\\u0435\\u043d\\u0456\\u0441 \\u2014 \\u0446\\u0435 \\u043d\\u0435 \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u0441\\u043f\\u043e\\u0440\\u0442, \\u0430 \\u0441\\u0442\\u0438\\u043b\\u044c \\u0436\\u0438\\u0442\\u0442\\u044f, \\u0440\\u043e\\u0437\\u0432\\u0438\\u0442\\u043e\\u043a \\u0445\\u0430\\u0440\\u0430\\u043a\\u0442\\u0435\\u0440\\u0443 \\u0442\\u0430 \\u0441\\u043f\\u0440\\u0430\\u0432\\u0436\\u043d\\u0454 \\u0437\\u0430\\u0434\\u043e\\u0432\\u043e\\u043b\\u0435\\u043d\\u043d\\u044f \\u0432\\u0456\\u0434 \\u0433\\u0440\\u0438.&lt;\\/p&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;424&quot; data-start=&quot;403&quot;&gt;\\u0414\\u043b\\u044f \\u043a\\u043e\\u0433\\u043e \\u043d\\u0430\\u0448 \\u043a\\u043b\\u0443\\u0431&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;576&quot; data-start=&quot;425&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;448&quot; data-start=&quot;425&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;448&quot; data-start=&quot;427&quot;&gt;\\ud83c\\udfbe \\u0414\\u0456\\u0442\\u0438 \\u0432\\u0456\\u0434 5 \\u0440\\u043e\\u043a\\u0456\\u0432&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;478&quot; data-start=&quot;449&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;478&quot; data-start=&quot;451&quot;&gt;\\ud83c\\udfbe \\u041f\\u043e\\u0447\\u0430\\u0442\\u043a\\u0456\\u0432\\u0446\\u0456 \\u0431\\u0435\\u0437 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0443&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;514&quot; data-start=&quot;479&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;514&quot; data-start=&quot;481&quot;&gt;\\ud83c\\udfbe \\u0410\\u043c\\u0430\\u0442\\u043e\\u0440\\u0438 \\u0442\\u0430 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u0447\\u0435\\u043d\\u0456 \\u0433\\u0440\\u0430\\u0432\\u0446\\u0456&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;576&quot; data-start=&quot;515&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;576&quot; data-start=&quot;517&quot;&gt;\\ud83c\\udfbe \\u0422\\u0456, \\u0445\\u0442\\u043e \\u0445\\u043e\\u0447\\u0435 \\u043f\\u0456\\u0434\\u0442\\u0440\\u0438\\u043c\\u0443\\u0432\\u0430\\u0442\\u0438 \\u0444\\u043e\\u0440\\u043c\\u0443 \\u0442\\u0430 \\u0430\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e \\u043f\\u0440\\u043e\\u0432\\u043e\\u0434\\u0438\\u0442\\u0438 \\u0447\\u0430\\u0441&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;598&quot; data-start=&quot;578&quot;&gt;\\u0429\\u043e \\u043c\\u0438 \\u043f\\u0440\\u043e\\u043f\\u043e\\u043d\\u0443\\u0454\\u043c\\u043e&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;789&quot; data-start=&quot;599&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;638&quot; data-start=&quot;599&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;638&quot; data-start=&quot;601&quot;&gt;\\u0406\\u043d\\u0434\\u0438\\u0432\\u0456\\u0434\\u0443\\u0430\\u043b\\u044c\\u043d\\u0456 \\u0442\\u0430 \\u0433\\u0440\\u0443\\u043f\\u043e\\u0432\\u0456 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;674&quot; data-start=&quot;639&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;674&quot; data-start=&quot;641&quot;&gt;\\u041f\\u0440\\u043e\\u0444\\u0435\\u0441\\u0456\\u0439\\u043d\\u0438\\u0445 \\u0442\\u0440\\u0435\\u043d\\u0435\\u0440\\u0456\\u0432 \\u0437 \\u0434\\u043e\\u0441\\u0432\\u0456\\u0434\\u043e\\u043c&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;718&quot; data-start=&quot;675&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;718&quot; data-start=&quot;677&quot;&gt;\\u041d\\u0430\\u0432\\u0447\\u0430\\u043d\\u043d\\u044f \\u0437 \\u043d\\u0443\\u043b\\u044f \\u0442\\u0430 \\u043f\\u0456\\u0434\\u0432\\u0438\\u0449\\u0435\\u043d\\u043d\\u044f \\u0440\\u0456\\u0432\\u043d\\u044f \\u0433\\u0440\\u0438&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;752&quot; data-start=&quot;719&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;752&quot; data-start=&quot;721&quot;&gt;\\u0414\\u0440\\u0443\\u0436\\u043d\\u044e \\u0430\\u0442\\u043c\\u043e\\u0441\\u0444\\u0435\\u0440\\u0443 \\u0442\\u0430 \\u043c\\u043e\\u0442\\u0438\\u0432\\u0430\\u0446\\u0456\\u044e&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;789&quot; data-start=&quot;753&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;789&quot; data-start=&quot;755&quot;&gt;\\u041f\\u0456\\u0434\\u0433\\u043e\\u0442\\u043e\\u0432\\u043a\\u0443 \\u0434\\u043e \\u0442\\u0443\\u0440\\u043d\\u0456\\u0440\\u0456\\u0432 \\u0456 \\u0437\\u043c\\u0430\\u0433\\u0430\\u043d\\u044c&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;813&quot; data-start=&quot;791&quot;&gt;\\u0427\\u043e\\u043c\\u0443 \\u0441\\u0430\\u043c\\u0435 &lt;strong data-end=&quot;813&quot; data-start=&quot;805&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt;&lt;\\/h3&gt;\\r\\n\\r\\n&lt;ul data-end=&quot;973&quot; data-start=&quot;814&quot;&gt;\\r\\n\\t&lt;li data-end=&quot;842&quot; data-start=&quot;814&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;842&quot; data-start=&quot;816&quot;&gt;\\u042f\\u043a\\u0456\\u0441\\u043d\\u0456 \\u043a\\u043e\\u0440\\u0442\\u0438 \\u0442\\u0430 \\u0456\\u043d\\u0432\\u0435\\u043d\\u0442\\u0430\\u0440&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;886&quot; data-start=&quot;843&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;886&quot; data-start=&quot;845&quot;&gt;\\u0406\\u043d\\u0434\\u0438\\u0432\\u0456\\u0434\\u0443\\u0430\\u043b\\u044c\\u043d\\u0438\\u0439 \\u043f\\u0456\\u0434\\u0445\\u0456\\u0434 \\u0434\\u043e \\u043a\\u043e\\u0436\\u043d\\u043e\\u0433\\u043e \\u0433\\u0440\\u0430\\u0432\\u0446\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;923&quot; data-start=&quot;887&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;923&quot; data-start=&quot;889&quot;&gt;\\u0411\\u0435\\u0437\\u043f\\u0435\\u0447\\u043d\\u0456 \\u0442\\u0430 \\u0435\\u0444\\u0435\\u043a\\u0442\\u0438\\u0432\\u043d\\u0456 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n\\t&lt;li data-end=&quot;973&quot; data-start=&quot;924&quot;&gt;\\r\\n\\t&lt;p data-end=&quot;973&quot; data-start=&quot;926&quot;&gt;\\u0420\\u0435\\u0430\\u043b\\u044c\\u043d\\u0438\\u0439 \\u043f\\u0440\\u043e\\u0433\\u0440\\u0435\\u0441 \\u0456 \\u0437\\u0430\\u0434\\u043e\\u0432\\u043e\\u043b\\u0435\\u043d\\u043d\\u044f \\u0432\\u0456\\u0434 \\u0440\\u0435\\u0437\\u0443\\u043b\\u044c\\u0442\\u0430\\u0442\\u0443&lt;\\/p&gt;\\r\\n\\t&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n\\r\\n&lt;h3 data-end=&quot;1003&quot; data-start=&quot;975&quot;&gt;\\u041f\\u043e\\u0447\\u043d\\u0438 \\u0433\\u0440\\u0430\\u0442\\u0438 \\u0432\\u0436\\u0435 \\u0441\\u044c\\u043e\\u0433\\u043e\\u0434\\u043d\\u0456&lt;\\/h3&gt;\\r\\n\\r\\n&lt;p data-end=&quot;1161&quot; data-start=&quot;1004&quot;&gt;\\u0422\\u0435\\u043d\\u0456\\u0441 \\u2014 \\u0446\\u0435 \\u0441\\u0438\\u043b\\u0430, \\u0432\\u0438\\u0442\\u0440\\u0438\\u0432\\u0430\\u043b\\u0456\\u0441\\u0442\\u044c, \\u043a\\u043e\\u043d\\u0446\\u0435\\u043d\\u0442\\u0440\\u0430\\u0446\\u0456\\u044f \\u0442\\u0430 \\u0432\\u043f\\u0435\\u0432\\u043d\\u0435\\u043d\\u0456\\u0441\\u0442\\u044c \\u0443 \\u0441\\u043e\\u0431\\u0456.&lt;br data-end=&quot;1073&quot; data-start=&quot;1070&quot; \\/&gt;\\r\\n\\u041f\\u0440\\u0438\\u0454\\u0434\\u043d\\u0443\\u0439\\u0441\\u044f \\u0434\\u043e \\u0442\\u0435\\u043d\\u0456\\u0441\\u043d\\u043e\\u0433\\u043e \\u043a\\u043b\\u0443\\u0431\\u0443 &lt;strong data-end=&quot;1111&quot; data-start=&quot;1103&quot;&gt;\\u0425\\u0410\\u0420\\u0414&lt;\\/strong&gt; \\u0443 \\u0422\\u0435\\u0440\\u043d\\u043e\\u043f\\u043e\\u043b\\u0456 \\u0442\\u0430 \\u0432\\u0456\\u0434\\u043a\\u0440\\u0438\\u0439 \\u0434\\u043b\\u044f \\u0441\\u0435\\u0431\\u0435 \\u043d\\u043e\\u0432\\u0438\\u0439 \\u0440\\u0456\\u0432\\u0435\\u043d\\u044c \\u0433\\u0440\\u0438.&lt;\\/p&gt;\\r\\n\\r\\n&lt;p data-end=&quot;1208&quot; data-start=&quot;1163&quot;&gt;&lt;strong data-end=&quot;1208&quot; data-start=&quot;1163&quot;&gt;\\u0417\\u0430\\u043f\\u0438\\u0448\\u0438\\u0441\\u044c \\u043d\\u0430 \\u043f\\u0435\\u0440\\u0448\\u0435 \\u0442\\u0440\\u0435\\u043d\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f \\u043f\\u0440\\u044f\\u043c\\u043e \\u0437\\u0430\\u0440\\u0430\\u0437!&lt;\\/strong&gt;&lt;\\/p&gt;\\r\\n\\r\\n&lt;hr data-end=&quot;1213&quot; data-start=&quot;1210&quot; \\/&gt;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;z-0 flex min-h-[46px] justify-start&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;relative basis-auto flex-col -mb-(--composer-overlap-px) [--composer-overlap-px:55px] grow flex&quot;&gt;\\r\\n&lt;div class=&quot;flex flex-col text-sm pb-25&quot;&gt;\\r\\n&lt;article class=&quot;text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;amp;:has([data-writing-block])&amp;gt;*]:pointer-events-auto [content-visibility:auto] supports-[content-visibility:auto]:[contain-intrinsic-size:auto_100lvh] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]&quot; data-scroll-anchor=&quot;true&quot; data-testid=&quot;conversation-turn-2&quot; data-turn=&quot;assistant&quot; data-turn-id=&quot;2d24c563-cf78-49df-ad3f-ddfa3c3e76ca&quot; dir=&quot;auto&quot; tabindex=&quot;-1&quot;&gt;\\r\\n&lt;div class=&quot;text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm\\/main:[--thread-content-margin:--spacing(6)] @w-lg\\/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)&quot;&gt;\\r\\n&lt;div class=&quot;[--thread-content-max-width:40rem] @w-lg\\/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group\\/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn&quot; tabindex=&quot;-1&quot;&gt;\\r\\n&lt;div class=&quot;mt-3 w-full empty:hidden&quot;&gt;\\r\\n&lt;div class=&quot;text-center&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/article&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div aria-hidden=&quot;true&quot; class=&quot;pointer-events-none h-px w-px absolute bottom-0&quot; data-edge=&quot;true&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;sticky bottom-0 group\\/thread-bottom-container relative isolate z-10 w-full basis-auto has-data-has-thread-error:pt-2 has-data-has-thread-error:[box-shadow:var(--sharp-edge-bottom-shadow)] md:border-transparent md:pt-0 dark:border-white\\/20 md:dark:border-transparent print:hidden content-fade flex flex-col&quot; id=&quot;thread-bottom-container&quot;&gt;\\r\\n&lt;div class=&quot;relative h-0&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;text-base mx-auto [--thread-content-margin:--spacing(4)] @w-sm\\/main:[--thread-content-margin:--spacing(6)] @w-lg\\/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)&quot;&gt;\\r\\n&lt;div class=&quot;[--thread-content-max-width:40rem] @w-lg\\/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 mb-4&quot;&gt;\\r\\n&lt;div class=&quot;flex justify-center empty:hidden&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;pointer-events-auto relative z-1 flex h-(--composer-container-height,100%) max-w-full flex-(--composer-container-flex,1) flex-col&quot;&gt;&amp;nbsp;&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;\"}},\"status\":\"1\",\"module_id\":\"0\"}');
 
 -- --------------------------------------------------------
 
@@ -4648,8 +4648,8 @@ CREATE TABLE `te_session` (
 --
 
 INSERT INTO `te_session` (`session_id`, `data`, `expire`) VALUES
-('e977d3a09f741d8284703e328f', '{\"currency\":\"USD\",\"upload_token\":\"d3f3572c55413b9459b6534cdc18d762\",\"review_token\":\"07045587ef5a9c2a971ce2c8f9a64e39\",\"register_token\":\"38edee8c818355c372b4437361\",\"user_id\":\"1\",\"user_token\":\"14ee9d63ad6753761e32ffc14b153afa\"}', '2026-01-04 20:41:33'),
-('f5bab5379d1da41713278daa61', '{\"currency\":\"USD\"}', '2026-01-04 20:36:25');
+('51a8ff83cfb0d49572822fec6a', '{\"currency\":\"USD\",\"user_id\":\"1\",\"user_token\":\"46b6b23f22426197be54a5553b5c18b5\"}', '2026-01-13 20:18:54'),
+('e977d3a09f741d8284703e328f', '{\"currency\":\"USD\",\"register_token\":\"ecc9374153ce2065f925b83eaa\",\"upload_token\":\"abea1a88c5fb0eae963542f694d8b0d3\",\"user_id\":\"1\",\"user_token\":\"25c6d0bc2569b3b0eee1198d054d6bcd\"}', '2026-01-13 20:18:33');
 
 -- --------------------------------------------------------
 
@@ -4759,147 +4759,147 @@ INSERT INTO `te_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (216, 0, 'total_coupon', 'total_coupon_sort_order', '4', 0),
 (217, 0, 'total_coupon', 'total_coupon_status', '1', 0),
 (360, 0, 'developer', 'developer_sass', '1', 0),
-(784, 0, 'config', 'config_name', 'Хард', 0),
-(785, 0, 'config', 'config_theme', 'basic', 0),
-(786, 0, 'config', 'config_layout_id', '4', 0),
-(787, 0, 'config', 'config_logo', 'catalog/opencart-logo.png', 0),
-(788, 0, 'config', 'config_icon', 'catalog/opencart.ico', 0),
-(789, 0, 'config', 'config_description', '{\"1\":{\"meta_title\":\"Hard\",\"meta_description\":\"\",\"meta_keyword\":\"\"},\"2\":{\"meta_title\":\"\\u0425\\u0430\\u0440\\u0434\",\"meta_description\":\"\",\"meta_keyword\":\"\"}}', 1),
-(790, 0, 'config', 'config_owner', 'Your Name', 0),
-(791, 0, 'config', 'config_address', 'Address 1', 0),
-(792, 0, 'config', 'config_geocode', '', 0),
-(793, 0, 'config', 'config_email', 'sernuzh@gmail.com', 0),
-(794, 0, 'config', 'config_telephone', '123456789', 0),
-(795, 0, 'config', 'config_image', '', 0),
-(796, 0, 'config', 'config_open', '', 0),
-(797, 0, 'config', 'config_comment', '', 0),
-(798, 0, 'config', 'config_country_id', '220', 0),
-(799, 0, 'config', 'config_zone_id', '3500', 0),
-(800, 0, 'config', 'config_timezone', 'UTC', 0),
-(801, 0, 'config', 'config_language_catalog', 'uk-ua', 0),
-(802, 0, 'config', 'config_language_admin', 'en-gb', 0),
-(803, 0, 'config', 'config_currency', 'USD', 0),
-(804, 0, 'config', 'config_currency_engine', 'ecb', 0),
-(805, 0, 'config', 'config_currency_auto', '0', 0),
-(806, 0, 'config', 'config_length_class_id', '1', 0),
-(807, 0, 'config', 'config_weight_class_id', '1', 0),
-(808, 0, 'config', 'config_product_description_length', '100', 0),
-(809, 0, 'config', 'config_pagination', '10', 0),
-(810, 0, 'config', 'config_product_count', '1', 0),
-(811, 0, 'config', 'config_pagination_admin', '10', 0),
-(812, 0, 'config', 'config_autocomplete_limit', '5', 0),
-(813, 0, 'config', 'config_product_report_status', '0', 0),
-(814, 0, 'config', 'config_review_status', '1', 0),
-(815, 0, 'config', 'config_review_purchased', '0', 0),
-(816, 0, 'config', 'config_review_guest', '1', 0),
-(817, 0, 'config', 'config_article_description_length', '600', 0),
-(818, 0, 'config', 'config_comment_status', '0', 0),
-(819, 0, 'config', 'config_comment_approve', '0', 0),
-(820, 0, 'config', 'config_comment_interval', '', 0),
-(821, 0, 'config', 'config_cookie_id', '0', 0),
-(822, 0, 'config', 'config_gdpr_id', '0', 0),
-(823, 0, 'config', 'config_gdpr_limit', '180', 0),
-(824, 0, 'config', 'config_tax', '1', 0),
-(825, 0, 'config', 'config_tax_default', 'shipping', 0),
-(826, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(827, 0, 'config', 'config_customer_online', '0', 0),
-(828, 0, 'config', 'config_customer_online_expire', '1', 0),
-(829, 0, 'config', 'config_customer_activity', '0', 0),
-(830, 0, 'config', 'config_customer_search', '0', 0),
-(831, 0, 'config', 'config_customer_group_id', '1', 0),
-(832, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
-(833, 0, 'config', 'config_customer_price', '0', 0),
-(834, 0, 'config', 'config_telephone_display', '0', 0),
-(835, 0, 'config', 'config_telephone_required', '0', 0),
-(836, 0, 'config', 'config_account_id', '3', 0),
-(837, 0, 'config', 'config_2fa', '0', 0),
-(838, 0, 'config', 'config_login_attempts', '5', 0),
-(839, 0, 'config', 'config_password_length', '6', 0),
-(840, 0, 'config', 'config_invoice_prefix', 'INV-2025-00', 0),
-(841, 0, 'config', 'config_cart_weight', '1', 0),
-(842, 0, 'config', 'config_checkout_guest', '1', 0),
-(843, 0, 'config', 'config_checkout_payment_address', '0', 0),
-(844, 0, 'config', 'config_checkout_shipping_address', '0', 0),
-(845, 0, 'config', 'config_checkout_id', '0', 0),
-(846, 0, 'config', 'config_order_status_id', '1', 0),
-(847, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
-(848, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
-(849, 0, 'config', 'config_failed_status_id', '7', 0),
-(850, 0, 'config', 'config_void_status_id', '16', 0),
-(851, 0, 'config', 'config_fraud_status_id', '8', 0),
-(852, 0, 'config', 'config_api_id', '1', 0),
-(853, 0, 'config', 'config_subscription_status_id', '1', 0),
-(854, 0, 'config', 'config_subscription_active_status_id', '2', 0),
-(855, 0, 'config', 'config_subscription_expired_status_id', '3', 0),
-(856, 0, 'config', 'config_subscription_suspended_status_id', '4', 0),
-(857, 0, 'config', 'config_subscription_canceled_status_id', '5', 0),
-(858, 0, 'config', 'config_subscription_failed_status_id', '6', 0),
-(859, 0, 'config', 'config_subscription_denied_status_id', '7', 0),
-(860, 0, 'config', 'config_stock_display', '0', 0),
-(861, 0, 'config', 'config_stock_warning', '0', 0),
-(862, 0, 'config', 'config_stock_checkout', '0', 0),
-(863, 0, 'config', 'config_stock_status_id', '7', 0),
-(864, 0, 'config', 'config_affiliate_status', '1', 0),
-(865, 0, 'config', 'config_affiliate_group_id', '1', 0),
-(866, 0, 'config', 'config_affiliate_approval', '0', 0),
-(867, 0, 'config', 'config_affiliate_auto', '0', 0),
-(868, 0, 'config', 'config_affiliate_commission', '5', 0),
-(869, 0, 'config', 'config_affiliate_expire', '', 0),
-(870, 0, 'config', 'config_affiliate_id', '4', 0),
-(871, 0, 'config', 'config_return_status_id', '2', 0),
-(872, 0, 'config', 'config_return_id', '0', 0),
-(873, 0, 'config', 'config_captcha', '', 0),
-(874, 0, 'config', 'config_captcha_page', '[\"review\",\"contact\"]', 1),
-(875, 0, 'config', 'config_image_default_width', '300', 0),
-(876, 0, 'config', 'config_image_default_height', '300', 0),
-(877, 0, 'config', 'config_image_category_width', '300', 0),
-(878, 0, 'config', 'config_image_category_height', '300', 0),
-(879, 0, 'config', 'config_image_thumb_width', '500', 0),
-(880, 0, 'config', 'config_image_thumb_height', '500', 0),
-(881, 0, 'config', 'config_image_popup_width', '800', 0),
-(882, 0, 'config', 'config_image_popup_height', '800', 0),
-(883, 0, 'config', 'config_image_product_width', '250', 0),
-(884, 0, 'config', 'config_image_product_height', '250', 0),
-(885, 0, 'config', 'config_image_additional_width', '74', 0),
-(886, 0, 'config', 'config_image_additional_height', '74', 0),
-(887, 0, 'config', 'config_image_related_width', '250', 0),
-(888, 0, 'config', 'config_image_related_height', '250', 0),
-(889, 0, 'config', 'config_image_article_width', '1140', 0),
-(890, 0, 'config', 'config_image_article_height', '380', 0),
-(891, 0, 'config', 'config_image_topic_width', '1140', 0),
-(892, 0, 'config', 'config_image_topic_height', '380', 0),
-(893, 0, 'config', 'config_image_compare_width', '90', 0),
-(894, 0, 'config', 'config_image_compare_height', '90', 0),
-(895, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(896, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(897, 0, 'config', 'config_image_cart_width', '47', 0),
-(898, 0, 'config', 'config_image_cart_height', '47', 0),
-(899, 0, 'config', 'config_image_location_width', '268', 0),
-(900, 0, 'config', 'config_image_location_height', '268', 0),
-(901, 0, 'config', 'config_mail_engine', '', 0),
-(902, 0, 'config', 'config_mail_parameter', '', 0),
-(903, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(904, 0, 'config', 'config_mail_smtp_username', '', 0),
-(905, 0, 'config', 'config_mail_smtp_password', '', 0),
-(906, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(907, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(908, 0, 'config', 'config_mail_alert', '[\"order\"]', 1),
-(909, 0, 'config', 'config_mail_alert_email', '', 0),
-(910, 0, 'config', 'config_maintenance', '0', 0),
-(911, 0, 'config', 'config_session_expire', '86400', 0),
-(912, 0, 'config', 'config_session_samesite', 'Strict', 0),
-(913, 0, 'config', 'config_seo_url', '0', 0),
-(914, 0, 'config', 'config_compression', '0', 0),
-(915, 0, 'config', 'config_user_2fa', '0', 0),
-(916, 0, 'config', 'config_2fa_expire', '90', 0),
-(917, 0, 'config', 'config_user_password_length', '', 0),
-(918, 0, 'config', 'config_shared', '0', 0),
-(919, 0, 'config', 'config_file_max_size', '20', 0),
-(920, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\nwebp\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nmp4\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(921, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/webp\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-zip\r\napplication/x-zip-compressed\r\napplication/rar\r\napplication/x-rar\r\napplication/x-rar-compressed\r\napplication/octet-stream\r\naudio/mpeg\r\nvideo/mp4\r\nvideo/quicktime\r\napplication/pdf', 0),
-(922, 0, 'config', 'config_error_display', '1', 0),
-(923, 0, 'config', 'config_error_log', '1', 0),
-(924, 0, 'config', 'config_error_filename', 'error.log', 0);
+(1207, 0, 'config', 'config_name', 'Хард', 0),
+(1208, 0, 'config', 'config_theme', 'basic', 0),
+(1209, 0, 'config', 'config_layout_id', '4', 0),
+(1210, 0, 'config', 'config_logo', 'catalog/opencart-logo.png', 0),
+(1211, 0, 'config', 'config_icon', 'catalog/opencart.ico', 0),
+(1212, 0, 'config', 'config_description', '{\"2\":{\"meta_title\":\"\\u0425\\u0430\\u0440\\u0434\",\"meta_description\":\"\",\"meta_keyword\":\"\"},\"1\":{\"meta_title\":\"Hard\",\"meta_description\":\"\",\"meta_keyword\":\"\"}}', 1),
+(1213, 0, 'config', 'config_owner', 'Your Name', 0),
+(1214, 0, 'config', 'config_address', 'Address 1', 0),
+(1215, 0, 'config', 'config_geocode', '', 0),
+(1216, 0, 'config', 'config_email', 'sernuzh@gmail.com', 0),
+(1217, 0, 'config', 'config_telephone', '+38 0975138252', 0),
+(1218, 0, 'config', 'config_image', '', 0),
+(1219, 0, 'config', 'config_open', '', 0),
+(1220, 0, 'config', 'config_comment', '', 0),
+(1221, 0, 'config', 'config_country_id', '220', 0),
+(1222, 0, 'config', 'config_zone_id', '3500', 0),
+(1223, 0, 'config', 'config_timezone', 'UTC', 0),
+(1224, 0, 'config', 'config_language_catalog', 'uk-ua', 0),
+(1225, 0, 'config', 'config_language_admin', 'uk-ua', 0),
+(1226, 0, 'config', 'config_currency', 'USD', 0),
+(1227, 0, 'config', 'config_currency_engine', 'ecb', 0),
+(1228, 0, 'config', 'config_currency_auto', '0', 0),
+(1229, 0, 'config', 'config_length_class_id', '1', 0),
+(1230, 0, 'config', 'config_weight_class_id', '1', 0),
+(1231, 0, 'config', 'config_product_description_length', '100', 0),
+(1232, 0, 'config', 'config_pagination', '10', 0),
+(1233, 0, 'config', 'config_product_count', '1', 0),
+(1234, 0, 'config', 'config_pagination_admin', '10', 0),
+(1235, 0, 'config', 'config_autocomplete_limit', '5', 0),
+(1236, 0, 'config', 'config_product_report_status', '0', 0),
+(1237, 0, 'config', 'config_review_status', '1', 0),
+(1238, 0, 'config', 'config_review_purchased', '0', 0),
+(1239, 0, 'config', 'config_review_guest', '1', 0),
+(1240, 0, 'config', 'config_article_description_length', '600', 0),
+(1241, 0, 'config', 'config_comment_status', '0', 0),
+(1242, 0, 'config', 'config_comment_approve', '0', 0),
+(1243, 0, 'config', 'config_comment_interval', '', 0),
+(1244, 0, 'config', 'config_cookie_id', '0', 0),
+(1245, 0, 'config', 'config_gdpr_id', '0', 0),
+(1246, 0, 'config', 'config_gdpr_limit', '180', 0),
+(1247, 0, 'config', 'config_tax', '1', 0),
+(1248, 0, 'config', 'config_tax_default', 'shipping', 0),
+(1249, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(1250, 0, 'config', 'config_customer_online', '0', 0),
+(1251, 0, 'config', 'config_customer_online_expire', '1', 0),
+(1252, 0, 'config', 'config_customer_activity', '0', 0),
+(1253, 0, 'config', 'config_customer_search', '0', 0),
+(1254, 0, 'config', 'config_customer_group_id', '1', 0),
+(1255, 0, 'config', 'config_customer_group_display', '[\"1\"]', 1),
+(1256, 0, 'config', 'config_customer_price', '0', 0),
+(1257, 0, 'config', 'config_telephone_display', '0', 0),
+(1258, 0, 'config', 'config_telephone_required', '0', 0),
+(1259, 0, 'config', 'config_account_id', '3', 0),
+(1260, 0, 'config', 'config_2fa', '0', 0),
+(1261, 0, 'config', 'config_login_attempts', '5', 0),
+(1262, 0, 'config', 'config_password_length', '6', 0),
+(1263, 0, 'config', 'config_invoice_prefix', 'INV-2025-00', 0),
+(1264, 0, 'config', 'config_cart_weight', '1', 0),
+(1265, 0, 'config', 'config_checkout_guest', '1', 0),
+(1266, 0, 'config', 'config_checkout_payment_address', '0', 0),
+(1267, 0, 'config', 'config_checkout_shipping_address', '0', 0),
+(1268, 0, 'config', 'config_checkout_id', '0', 0),
+(1269, 0, 'config', 'config_order_status_id', '1', 0),
+(1270, 0, 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', 1),
+(1271, 0, 'config', 'config_complete_status', '[\"5\",\"3\"]', 1),
+(1272, 0, 'config', 'config_failed_status_id', '7', 0),
+(1273, 0, 'config', 'config_void_status_id', '16', 0),
+(1274, 0, 'config', 'config_fraud_status_id', '8', 0),
+(1275, 0, 'config', 'config_api_id', '1', 0),
+(1276, 0, 'config', 'config_subscription_status_id', '1', 0),
+(1277, 0, 'config', 'config_subscription_active_status_id', '2', 0),
+(1278, 0, 'config', 'config_subscription_expired_status_id', '3', 0),
+(1279, 0, 'config', 'config_subscription_suspended_status_id', '4', 0),
+(1280, 0, 'config', 'config_subscription_canceled_status_id', '5', 0),
+(1281, 0, 'config', 'config_subscription_failed_status_id', '6', 0),
+(1282, 0, 'config', 'config_subscription_denied_status_id', '7', 0),
+(1283, 0, 'config', 'config_stock_display', '0', 0),
+(1284, 0, 'config', 'config_stock_warning', '0', 0),
+(1285, 0, 'config', 'config_stock_checkout', '0', 0),
+(1286, 0, 'config', 'config_stock_status_id', '7', 0),
+(1287, 0, 'config', 'config_affiliate_status', '1', 0),
+(1288, 0, 'config', 'config_affiliate_group_id', '1', 0),
+(1289, 0, 'config', 'config_affiliate_approval', '0', 0),
+(1290, 0, 'config', 'config_affiliate_auto', '0', 0),
+(1291, 0, 'config', 'config_affiliate_commission', '5', 0),
+(1292, 0, 'config', 'config_affiliate_expire', '', 0),
+(1293, 0, 'config', 'config_affiliate_id', '4', 0),
+(1294, 0, 'config', 'config_return_status_id', '2', 0),
+(1295, 0, 'config', 'config_return_id', '0', 0),
+(1296, 0, 'config', 'config_captcha', '', 0),
+(1297, 0, 'config', 'config_captcha_page', '[\"review\",\"contact\"]', 1),
+(1298, 0, 'config', 'config_image_default_width', '300', 0),
+(1299, 0, 'config', 'config_image_default_height', '300', 0),
+(1300, 0, 'config', 'config_image_category_width', '300', 0),
+(1301, 0, 'config', 'config_image_category_height', '300', 0),
+(1302, 0, 'config', 'config_image_thumb_width', '500', 0),
+(1303, 0, 'config', 'config_image_thumb_height', '500', 0),
+(1304, 0, 'config', 'config_image_popup_width', '800', 0),
+(1305, 0, 'config', 'config_image_popup_height', '800', 0),
+(1306, 0, 'config', 'config_image_product_width', '250', 0),
+(1307, 0, 'config', 'config_image_product_height', '250', 0),
+(1308, 0, 'config', 'config_image_additional_width', '74', 0),
+(1309, 0, 'config', 'config_image_additional_height', '74', 0),
+(1310, 0, 'config', 'config_image_related_width', '250', 0),
+(1311, 0, 'config', 'config_image_related_height', '250', 0),
+(1312, 0, 'config', 'config_image_article_width', '1140', 0),
+(1313, 0, 'config', 'config_image_article_height', '380', 0),
+(1314, 0, 'config', 'config_image_topic_width', '1140', 0),
+(1315, 0, 'config', 'config_image_topic_height', '380', 0),
+(1316, 0, 'config', 'config_image_compare_width', '90', 0),
+(1317, 0, 'config', 'config_image_compare_height', '90', 0),
+(1318, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(1319, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(1320, 0, 'config', 'config_image_cart_width', '47', 0),
+(1321, 0, 'config', 'config_image_cart_height', '47', 0),
+(1322, 0, 'config', 'config_image_location_width', '268', 0),
+(1323, 0, 'config', 'config_image_location_height', '268', 0),
+(1324, 0, 'config', 'config_mail_engine', '', 0),
+(1325, 0, 'config', 'config_mail_parameter', '', 0),
+(1326, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(1327, 0, 'config', 'config_mail_smtp_username', '', 0),
+(1328, 0, 'config', 'config_mail_smtp_password', '', 0),
+(1329, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(1330, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(1331, 0, 'config', 'config_mail_alert', '[\"order\"]', 1),
+(1332, 0, 'config', 'config_mail_alert_email', '', 0),
+(1333, 0, 'config', 'config_maintenance', '0', 0),
+(1334, 0, 'config', 'config_session_expire', '86400', 0),
+(1335, 0, 'config', 'config_session_samesite', 'Strict', 0),
+(1336, 0, 'config', 'config_seo_url', '0', 0),
+(1337, 0, 'config', 'config_compression', '0', 0),
+(1338, 0, 'config', 'config_user_2fa', '0', 0),
+(1339, 0, 'config', 'config_2fa_expire', '90', 0),
+(1340, 0, 'config', 'config_user_password_length', '', 0),
+(1341, 0, 'config', 'config_shared', '0', 0),
+(1342, 0, 'config', 'config_file_max_size', '20', 0),
+(1343, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\nwebp\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nmp4\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(1344, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/webp\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-zip\r\napplication/x-zip-compressed\r\napplication/rar\r\napplication/x-rar\r\napplication/x-rar-compressed\r\napplication/octet-stream\r\naudio/mpeg\r\nvideo/mp4\r\nvideo/quicktime\r\napplication/pdf', 0),
+(1345, 0, 'config', 'config_error_display', '1', 0),
+(1346, 0, 'config', 'config_error_log', '1', 0),
+(1347, 0, 'config', 'config_error_filename', 'error.log', 0);
 
 -- --------------------------------------------------------
 
@@ -5376,7 +5376,7 @@ CREATE TABLE `te_user` (
 --
 
 INSERT INTO `te_user` (`user_id`, `user_group_id`, `username`, `password`, `firstname`, `lastname`, `email`, `image`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', '$2y$10$bywuiEoqd4S2b36AUn7GTel0F6mDhAz3c5QnEaFeRwIM9bhPKViHm', 'John', 'Doe', 'sernuzh@gmail.com', '', '127.0.0.1', 1, '2025-12-30 14:48:45');
+(1, 1, 'admin', '$2y$10$bywuiEoqd4S2b36AUn7GTel0F6mDhAz3c5QnEaFeRwIM9bhPKViHm', 'John', 'Doe', 'sernuzh@gmail.com', '', '::1', 1, '2025-12-30 14:48:45');
 
 -- --------------------------------------------------------
 
@@ -5413,7 +5413,7 @@ CREATE TABLE `te_user_group` (
 --
 
 INSERT INTO `te_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Administrator', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\"]}'),
+(1, 'Administrator', '{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/module\\/html\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/module\\/html\"]}'),
 (2, 'Demonstration', ''),
 (3, 'Marketing', ''),
 (4, 'Product Data Entry', ''),
@@ -5447,7 +5447,10 @@ INSERT INTO `te_user_login` (`user_login_id`, `user_id`, `ip`, `user_agent`, `da
 (3, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-01 10:25:16'),
 (4, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-01 15:15:25'),
 (5, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-03 20:23:31'),
-(6, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-03 20:29:08');
+(6, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-03 20:29:08'),
+(7, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-11 18:20:32'),
+(8, 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0', '2026-01-12 20:16:00'),
+(9, 1, '::1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', '2026-01-12 20:18:03');
 
 -- --------------------------------------------------------
 
@@ -18919,7 +18922,7 @@ ALTER TABLE `te_api_ip`
 -- AUTO_INCREMENT for table `te_article`
 --
 ALTER TABLE `te_article`
-  MODIFY `article_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `article_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `te_article_comment`
@@ -19117,7 +19120,7 @@ ALTER TABLE `te_event`
 -- AUTO_INCREMENT for table `te_extension`
 --
 ALTER TABLE `te_extension`
-  MODIFY `extension_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `extension_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `te_extension_install`
@@ -19165,7 +19168,7 @@ ALTER TABLE `te_identifier`
 -- AUTO_INCREMENT for table `te_information`
 --
 ALTER TABLE `te_information`
-  MODIFY `information_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `information_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `te_language`
@@ -19183,13 +19186,13 @@ ALTER TABLE `te_layout`
 -- AUTO_INCREMENT for table `te_layout_module`
 --
 ALTER TABLE `te_layout_module`
-  MODIFY `layout_module_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `layout_module_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `te_layout_route`
 --
 ALTER TABLE `te_layout_route`
-  MODIFY `layout_route_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `layout_route_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `te_length_class`
@@ -19231,7 +19234,7 @@ ALTER TABLE `te_modification`
 -- AUTO_INCREMENT for table `te_module`
 --
 ALTER TABLE `te_module`
-  MODIFY `module_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `module_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `te_notification`
@@ -19381,13 +19384,13 @@ ALTER TABLE `te_review`
 -- AUTO_INCREMENT for table `te_seo_url`
 --
 ALTER TABLE `te_seo_url`
-  MODIFY `seo_url_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+  MODIFY `seo_url_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
 
 --
 -- AUTO_INCREMENT for table `te_setting`
 --
 ALTER TABLE `te_setting`
-  MODIFY `setting_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=925;
+  MODIFY `setting_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1348;
 
 --
 -- AUTO_INCREMENT for table `te_startup`
@@ -19519,7 +19522,7 @@ ALTER TABLE `te_user_group`
 -- AUTO_INCREMENT for table `te_user_login`
 --
 ALTER TABLE `te_user_login`
-  MODIFY `user_login_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_login_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `te_user_token`
