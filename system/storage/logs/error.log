@@ -152,3 +152,115 @@ Backtrace: 3
 File: /var/www/tennis/admin/index.php
 Line: 20
 Function: require_once
+2026-01-03 20:51:02 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:02 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:02 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-03 20:51:02 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-03 20:51:10 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:10 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:10 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-03 20:51:10 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-03 20:51:11 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:11 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-01-03 20:51:11 - PHP Warning:  Undefined array key "en-gb" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-03 20:51:11 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-01-11 18:34:20 - Error: Error: Could not load template common/header!
+File: /var/www/tennis/system/library/template/twig.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: /var/www/tennis/catalog/controller/common/header.php
+Line: 105
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Common\Header
+Function: index
+
+Backtrace: 4
+File: /var/www/tennis/catalog/controller/common/home.php
+Line: 31
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Common\Home
+Function: index
+
+Backtrace: 6
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 7
+File: /var/www/tennis/index.php
+Line: 20
+Function: require_once
+2026-01-11 18:34:48 - Error: Error: Could not load template common/header!
+File: /var/www/tennis/system/library/template/twig.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/template.php
+Line: 58
+Class: Opencart\System\Library\Template\Twig
+Function: render
+
+Backtrace: 1
+File: /var/www/tennis/system/engine/loader.php
+Line: 187
+Class: Opencart\System\Library\Template
+Function: render
+
+Backtrace: 2
+File: /var/www/tennis/catalog/controller/common/header.php
+Line: 105
+Class: Opencart\System\Engine\Loader
+Function: view
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/loader.php
+Line: 112
+Class: Opencart\Catalog\Controller\Common\Header
+Function: index
+
+Backtrace: 4
+File: /var/www/tennis/catalog/controller/common/home.php
+Line: 31
+Class: Opencart\System\Engine\Loader
+Function: controller
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Catalog\Controller\Common\Home
+Function: index
+
+Backtrace: 6
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 7
+File: /var/www/tennis/index.php
+Line: 20
+Function: require_once

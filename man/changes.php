@@ -47,7 +47,7 @@ https://webocreation.com/10-ways-to-speed-up-the-opencart-3-website-speed-optimi
 
 DONE speedup opencart
 -закоментувати 5-37, 49-53 рядок /system/startup.php
--видалити усе що повязане з datetimepicker/catalog/view/template/common/header.twig
+-видалити усе що повязане з datetimepicker/catalog/view/template/common/header.twig   -  не знайшов такого
 Вимкнути рахування загальної кількості товарів по категоріях в магазині
 IN FILES
 /catalog/controller/product/category.php 

@@ -41,14 +41,22 @@
       <div class="row">
         <div class="col-4">
           <ul class="list-inline">
-            <li class="list-inline-item me-3">{{ currency }}</li>
-            <li class="list-inline-item">{{ language }}</li>
+           {# <li class="list-inline-item me-3">{{ currency }}</li> #}
+           {# <li class="list-inline-item">{{ language }}</li> #}
+
+           <div id="logo">
+            {% if logo %}
+              <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
+            {% else %}
+              <h1><a href="{{ home }}">{{ name }}</a></h1>
+            {% endif %}
+          </div>
           </ul>
         </div>
         <div class="col text-end">
           <ul class="list-inline">
             <li class="list-inline-item"><a href="{{ contact }}"><i class="fa-solid fa-phone"></i> <span class="d-none d-lg-inline">{{ telephone }}</span></a></li>
-            <li class="list-inline-item">
+            {# <li class="list-inline-item">
               <div class="dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> <span class="d-none d-lg-inline">{{ text_account }}</span> <i class="fa-solid fa-caret-down"></i></a>
                 <ul class="dropdown-menu dropdown-menu-right">
@@ -64,10 +72,10 @@
                   {% endif %}
                 </ul>
               </div>
-            </li>
-            <li class="list-inline-item"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa-solid fa-heart"></i> <span class="d-none d-lg-inline">{{ text_wishlist }}</span></a></li>
-            <li class="list-inline-item"><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-lg-inline">{{ text_shopping_cart }}</span></a></li>
-            <li class="list-inline-item"><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa-solid fa-share"></i> <span class="d-none d-lg-inline">{{ text_checkout }}</span></a></li>
+            </li> #}
+           {# <li class="list-inline-item"><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa-solid fa-heart"></i> <span class="d-none d-lg-inline">{{ text_wishlist }}</span></a></li> #}
+           {# <li class="list-inline-item"><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-lg-inline">{{ text_shopping_cart }}</span></a></li> #}
+           {# <li class="list-inline-item"><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa-solid fa-share"></i> <span class="d-none d-lg-inline">{{ text_checkout }}</span></a></li> #}
           </ul>
         </div>
       </div>
@@ -77,18 +85,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-lg-4">
-          <div id="logo">
-            {% if logo %}
-              <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
-            {% else %}
-              <h1><a href="{{ home }}">{{ name }}</a></h1>
-            {% endif %}
-          </div>
+          
         </div>
-        <div class="col-md-5">{{ search }}</div>
-        <div id="cart" class="col-md-4 col-lg-3 mb-2">{{ cart }}</div>
+        {#  <div class="col-md-5">{{ search }}</div> #}
+        {# <div id="cart" class="col-md-4 col-lg-3 mb-2">{{ cart }}</div> #}
       </div>
     </div>
   </header>
   <main>
-    {{ menu }}
+    {# {{ menu }} #}
