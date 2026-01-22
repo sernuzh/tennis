@@ -16,6 +16,7 @@ class Sass extends \Opencart\System\Engine\Controller {
 	public function index(): void {
 		$files = glob(DIR_APPLICATION . 'view/stylesheet/*.scss');
 
+
 		if ($files) {
 			foreach ($files as $file) {
 				// Get the filename

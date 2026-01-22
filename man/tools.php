@@ -6,4 +6,5 @@ https://redesignr.ai/dashboard
 
 https://www.figma.com
 https://www.canva.com
+https://www.vistaprint.com/logomaker
 
