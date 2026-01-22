@@ -3,8 +3,7 @@ body {
   height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
-/*changed*/
-  color: green;
+  color: #444;
 }
 legend {
   padding: 7px 0;
@@ -168,7 +167,7 @@ button:focus {
   min-height: 40px;
   border-radius: 4px;
   padding: 0 1rem;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
 }
 #menu .navbar-nav > li > a {
   color: #fff;
