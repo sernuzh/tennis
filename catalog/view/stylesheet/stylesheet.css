@@ -235,6 +235,10 @@ button:focus {
           main{
             background-image: url("../../../image/catalog/home_background.jpg"); 
              background-repeat: no-repeat;
+            
+          }
+          #common-home{
+             padding-top: 20px;
           }
 @media (min-width: 960px) {
   #menu .dropdown:hover .dropdown-menu {
