@@ -31,5 +31,9 @@ $data['stylesheet'] = 'catalog/view/stylesheet/serhii.css'; , замість sty
 
 Змінити колір меню в топі хедера треба перш ніж редагувати stylesheet.css треба в файлі /catalog/view/template/common/header.twig в тегу <div id="menu" class="navbar navbar-expand-lg bg-primary"> забрати bg-primary
 
+Забрати відступ від top до main контенту в файлі /catalog/view/stylesheet/stylesheet.css для #top { - видалити   padding-bottom: 5px; і бажано margin-bottom: 20px;
+
+
+
 
 

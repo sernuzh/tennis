@@ -92,9 +92,7 @@ button:focus {
 /* top */
 #top {
   background-color: var(--bs-tertiary-bg);   
-  margin-bottom: 20px;
   position: relative;
-  padding-bottom: 5px;     
 }
 
 #top ul.list-inline {
@@ -234,6 +232,10 @@ button:focus {
   width: 100%;
   min-width: 200px;
 }
+          main{
+            background-image: url("../../../image/catalog/home_background.jpg"); 
+             background-repeat: no-repeat;
+          }
 @media (min-width: 960px) {
   #menu .dropdown:hover .dropdown-menu {
     display: block;
