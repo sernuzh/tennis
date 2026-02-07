@@ -265,6 +265,11 @@ button:focus {
           h1.hard-title{
             font-size: 40px;
             color: #ffffff;
+            text-shadow:
+                -1px -1px 0 #3a6459,
+                 1px -1px 0 #3a6459,
+                -1px  1px 0 #3a6459,
+                 1px  1px 0 #3a6459;
           }
           #common-home{
             background-image: url("../../../image/catalog/home_background.jpg"); 
