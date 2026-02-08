@@ -232,7 +232,25 @@ button:focus {
   width: 100%;
   min-width: 200px;
 }
+           #common-home{
+            background-image: url("../../../image/catalog/home_background.jpg"); 
+             background-repeat: no-repeat;
+            padding-top: 20px;
+            padding-right: 50px;
+          }
+          @media(max-width:590px){
+            #common-home{
+              padding-right: 5px;
+            }
+          }
           .home-content{
+
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             margin: 0 auto; 
             font-family: Arial, Helvetica, sans-serif; 
             line-height: 1.6; 
@@ -245,12 +263,14 @@ button:focus {
                  1px -1px 0 #232334,
                 -1px  1px 0 #232334,
                  1px  1px 0 #232334;
+            padding-right: 20px;
+            padding-left: 20px;
           }
           .home-content h2{
             color: #9e9eae;
             font-weight: bold;
             font-size: 26px;
-             margin-top: 32px; 
+             margin-top: 20px; 
              margin-bottom: 5px;
           }
           .home-content p{
@@ -271,17 +291,7 @@ button:focus {
                 -1px  1px 0 #3a6459,
                  1px  1px 0 #3a6459;
           }
-          #common-home{
-            background-image: url("../../../image/catalog/home_background.jpg"); 
-             background-repeat: no-repeat;
-            padding-top: 0px;
-            padding-right: 50px;
-          }
-          @media(max-width:590px){
-            #common-home{
-              padding-right: 5px;
-            }
-          }
+         
 @media (min-width: 960px) {
   #menu .dropdown:hover .dropdown-menu {
     display: block;
