@@ -236,11 +236,12 @@ button:focus {
             background-image: url("../../../image/catalog/home_background.jpg"); 
              background-repeat: no-repeat;
             padding-top: 20px;
-            padding-right: 50px;
+            padding-left: 20px;
           }
           @media(max-width:590px){
             #common-home{
-              padding-right: 5px;
+              padding-right: 2px;
+              padding-left: 2px;
             }
           }
           .home-content{
@@ -257,7 +258,7 @@ button:focus {
             color: #ccccd6;
             font-weight:bold;
             font-size: 15px;
-            text-align: right;
+            text-align: left;
              text-shadow:
                 -1px -1px 0 #232334,
                  1px -1px 0 #232334,
@@ -360,8 +361,7 @@ footer {
   bottom: -1px;
   width: 100%;
   padding-top: 30px;
-  background-color: #787d87;
-  border-top: 1px solid #ddd;
+  background-color: #1d3e77;
   color: #e2e2e2;
 }
 footer hr {
