@@ -31,6 +31,11 @@ Options -Indexes
 # Deny from all
 </FilesMatch>
 
+
+# Redirect all /ua/... URLs to remove /ua/ prefix (default language)
+RewriteCond %{REQUEST_URI} ^/tennis/ua/(.*)$
+RewriteRule ^ua/(.*)$ /tennis/$1 [R=301,L]
+
 ## SEO URL Settings
 RewriteEngine On
 ## If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/
@@ -68,6 +73,8 @@ Admin panel - Settings - Server - enable SEO
 Admin panel -Design - SEO Url - create new - 
 contacts 	route 	information/contact 	0 	За замовчуванням
 ua 	language 	uk-ua 	-2  - це для мови
+home 	route 	common/home 	0 - для домашньої сторінки
+
 
 Cmd - sudo a2enmod rewrite - sudo systemctl restart apache2
 

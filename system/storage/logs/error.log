@@ -1,1 +1,29 @@
 2026-01-22 15:17:07 - PHP Warning:  Undefined variable $files in /var/www/tennis/catalog/controller/startup/sass.php on line 19
+2026-02-10 13:48:10 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:10 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:10 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:10 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:13 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:13 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:13 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:13 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:14 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:14 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:14 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:14 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:16 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:16 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:16 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:16 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:17 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:17 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:17 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:17 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:18 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:18 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:18 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:18 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:20 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:20 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-02-10 13:48:20 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-02-10 13:48:20 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
