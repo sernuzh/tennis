@@ -4,6 +4,7 @@ define('APPLICATION', 'Catalog');
 
 // HTTP
 define('HTTP_SERVER', 'http://localhost/tennis/');
+define('HTTPS_SERVER', 'https://localhost/tennis/');
 
 // DIR
 define('DIR_OPENCART', '/var/www/tennis/');

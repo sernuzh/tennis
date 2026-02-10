@@ -360,32 +360,32 @@ footer {
   bottom: -1px;
   width: 100%;
   padding-top: 30px;
+                  border-top: 1px solid #a24639;
                   background: linear-gradient(
                   to bottom,
-                  rgba(230, 113, 96, 0.25),
+                  rgba(230, 113, 96, 0.05),
                   rgba(230, 113, 96, 0.55)
-              );
-              backdrop-filter: blur(4px);
-              -webkit-backdrop-filter: blur(4px);
- 
-  color: #e2e2e2;
+                  );
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  color: #000000;
 }
 footer hr {
   border-top: none;
   border-bottom: 1px solid #666;
 }
 footer a {
-  color: #ccc;
+  color: #000000;
   text-decoration: none;
 }
 footer a:hover {
-  color: #fff;
+  color: #000000;
 }
 footer h5 {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: bold;
-  color: #fff;
+ color: #000000;
   margin-top: 10px;
   margin-bottom: 10px;
 }
