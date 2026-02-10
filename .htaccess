@@ -31,7 +31,7 @@
 </IfModule>
 
 ## Can be commented out if causes errors, see notes above.
-#Options +FollowSymlinks
+Options +FollowSymlinks
 
 ## Prevent Directory listing
 Options -Indexes
