@@ -67,6 +67,7 @@ Admin panel - Settings - Server - enable SEO
 
 Admin panel -Design - SEO Url - create new - 
 contacts 	route 	information/contact 	0 	За замовчуванням
+ua 	language 	uk-ua 	-2  - це для мови
 
 Cmd - sudo a2enmod rewrite - sudo systemctl restart apache2
 
