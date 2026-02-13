@@ -583,3 +583,6 @@ footer h5 {
 .contact-icons a:hover {
     color: #007bff;
 }
+#information-contact>.row{
+  margin-top: 10px;
+}
