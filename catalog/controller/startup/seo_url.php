@@ -65,6 +65,9 @@ class SeoUrl extends \Opencart\System\Engine\Controller {
 	public function rewrite(string $link): string {
 		$url_info = parse_url(str_replace('&amp;', '&', $link));
 
+if (isset($query['language'])) {
+    unset($query['language']);
+}
 		// Build the url
 		$url = '';
 
@@ -83,6 +86,7 @@ class SeoUrl extends \Opencart\System\Engine\Controller {
 		}
 
 		parse_str($url_info['query'], $query);
+		unset($query['language']);
 
 		$language_id = $this->config->get('config_language_id');
 

@@ -17,36 +17,29 @@ class Language extends \Opencart\System\Engine\Controller {
 	 * @return void
 	 */
 	public function index(): void {
-		// Language
-		$this->load->model('localisation/language');
+    $this->load->model('localisation/language');
 
-		self::$languages = $this->model_localisation_language->getLanguages();
+    self::$languages = $this->model_localisation_language->getLanguages();
 
-		$language_info = [];
+    // FIX: always force default language (NO GET LANGUAGE)
+    $language_info = self::$languages[$this->config->get('config_language_catalog')] ?? [];
 
-		// Set default language
-		if (isset(self::$languages[$this->config->get('config_language_catalog')])) {
-			$language_info = self::$languages[$this->config->get('config_language_catalog')];
-		}
+    if ($language_info) {
+        if ($language_info['extension']) {
+            $this->language->addPath(
+                'extension/' . $language_info['extension'],
+                DIR_EXTENSION . $language_info['extension'] . '/catalog/language/'
+            );
+        }
 
-		// If GET has language var
-		if (isset($this->request->get['language']) && isset(self::$languages[$this->request->get['language']])) {
-			$language_info = self::$languages[$this->request->get['language']];
-		}
+        $this->config->set('config_language_id', $language_info['language_id']);
+        //$this->config->set('config_language', $language_info['code']);
+        // FORCE SINGLE LANGUAGE
+$this->config->set('config_language', $this->config->get('config_language_catalog'));
 
-		if ($language_info) {
-			// If extension switch add language directory
-			if ($language_info['extension']) {
-				$this->language->addPath('extension/' . $language_info['extension'], DIR_EXTENSION . $language_info['extension'] . '/catalog/language/');
-			}
-
-			// Set the config language_id key
-			$this->config->set('config_language_id', $language_info['language_id']);
-			$this->config->set('config_language', $language_info['code']);
-
-			$this->load->language('default');
-		}
-	}
+        $this->load->language('default');
+    }
+}
 
 	/**
 	 * After
