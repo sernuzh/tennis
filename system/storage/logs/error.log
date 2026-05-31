@@ -27,3 +27,340 @@
 2026-02-10 13:48:20 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
 2026-02-10 13:48:20 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
 2026-02-10 13:48:20 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 15:15:46 - Error: Error: Unknown column 'article_id' in 'where clause'<br/>Error No: 1054<br/>DELETE FROM `te_topic_to_layout` WHERE `article_id` = '1'
+File: /var/www/tennis/system/library/db/mysqli.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/db.php
+Line: 54
+Class: Opencart\System\Library\DB\MySQLi
+Function: query
+
+Backtrace: 1
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 514
+Class: Opencart\System\Library\DB
+Function: query
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: deleteLayouts
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 125
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: editTopic
+
+Backtrace: 6
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 7
+File: /var/www/tennis/admin/controller/cms/topic.php
+Line: 378
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 8
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Cms\Topic
+Function: save
+
+Backtrace: 9
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 10
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-05-31 15:15:49 - Error: Error: Unknown column 'article_id' in 'where clause'<br/>Error No: 1054<br/>DELETE FROM `te_topic_to_layout` WHERE `article_id` = '1'
+File: /var/www/tennis/system/library/db/mysqli.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/db.php
+Line: 54
+Class: Opencart\System\Library\DB\MySQLi
+Function: query
+
+Backtrace: 1
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 514
+Class: Opencart\System\Library\DB
+Function: query
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: deleteLayouts
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 125
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: editTopic
+
+Backtrace: 6
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 7
+File: /var/www/tennis/admin/controller/cms/topic.php
+Line: 378
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 8
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Cms\Topic
+Function: save
+
+Backtrace: 9
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 10
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-05-31 15:15:49 - Error: Error: Unknown column 'article_id' in 'where clause'<br/>Error No: 1054<br/>DELETE FROM `te_topic_to_layout` WHERE `article_id` = '1'
+File: /var/www/tennis/system/library/db/mysqli.php
+Line: 122
+
+Backtrace: 0
+File: /var/www/tennis/system/library/db.php
+Line: 54
+Class: Opencart\System\Library\DB\MySQLi
+Function: query
+
+Backtrace: 1
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 514
+Class: Opencart\System\Library\DB
+Function: query
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: deleteLayouts
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 4
+File: /var/www/tennis/admin/model/cms/topic.php
+Line: 125
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 5
+File: /var/www/tennis/system/engine/loader.php
+Line: 343
+Class: Opencart\Admin\Model\Cms\Topic
+Function: editTopic
+
+Backtrace: 6
+File: /var/www/tennis/system/engine/proxy.php
+Line: 87
+Class: Opencart\System\Engine\Loader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 7
+File: /var/www/tennis/admin/controller/cms/topic.php
+Line: 378
+Class: Opencart\System\Engine\Proxy
+Function: __call
+
+Backtrace: 8
+File: /var/www/tennis/system/engine/action.php
+Line: 96
+Class: Opencart\Admin\Controller\Cms\Topic
+Function: save
+
+Backtrace: 9
+File: /var/www/tennis/system/framework.php
+Line: 259
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 10
+File: /var/www/tennis/admin/index.php
+Line: 20
+Function: require_once
+2026-05-31 16:44:09 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:44:09 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:44:09 - PHP Warning:  Undefined array key "uk-ua" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:44:09 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:44:15 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:44:15 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:44:15 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:44:15 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:55:16 - PHP Warning:  Undefined array key "file" in /var/www/tennis/system/framework.php on line 77
+2026-05-31 16:55:16 - PHP Warning:  Undefined array key "line" in /var/www/tennis/system/framework.php on line 78
+2026-05-31 16:55:16 - Error: syntax error, unexpected token "public", expecting end of file
+File: /var/www/tennis/catalog/controller/startup/language.php
+Line: 63
+
+Backtrace: 0
+File: /var/www/tennis/system/engine/autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 1
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/factory.php
+Line: 44
+Function: class_exists
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/action.php
+Line: 81
+Class: Opencart\System\Engine\Factory
+Function: controller
+
+Backtrace: 4
+File: /var/www/tennis/system/framework.php
+Line: 208
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: /var/www/tennis/index.php
+Line: 20
+Function: require_once
+2026-05-31 16:55:23 - PHP Warning:  Undefined array key "file" in /var/www/tennis/system/framework.php on line 77
+2026-05-31 16:55:23 - PHP Warning:  Undefined array key "line" in /var/www/tennis/system/framework.php on line 78
+2026-05-31 16:55:23 - Error: syntax error, unexpected token "public", expecting end of file
+File: /var/www/tennis/catalog/controller/startup/language.php
+Line: 63
+
+Backtrace: 0
+File: /var/www/tennis/system/engine/autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 1
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/factory.php
+Line: 44
+Function: class_exists
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/action.php
+Line: 81
+Class: Opencart\System\Engine\Factory
+Function: controller
+
+Backtrace: 4
+File: /var/www/tennis/system/framework.php
+Line: 208
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: /var/www/tennis/index.php
+Line: 20
+Function: require_once
+2026-05-31 16:55:27 - PHP Warning:  Undefined array key "file" in /var/www/tennis/system/framework.php on line 77
+2026-05-31 16:55:27 - PHP Warning:  Undefined array key "line" in /var/www/tennis/system/framework.php on line 78
+2026-05-31 16:55:27 - Error: syntax error, unexpected token "public", expecting end of file
+File: /var/www/tennis/catalog/controller/startup/language.php
+Line: 63
+
+Backtrace: 0
+File: /var/www/tennis/system/engine/autoloader.php
+Line: 26
+Class: Opencart\System\Engine\Autoloader
+Function: load
+
+Backtrace: 1
+File: 
+Line: 
+Class: Opencart\System\Engine\Autoloader
+Function: Opencart\System\Engine\{closure}
+
+Backtrace: 2
+File: /var/www/tennis/system/engine/factory.php
+Line: 44
+Function: class_exists
+
+Backtrace: 3
+File: /var/www/tennis/system/engine/action.php
+Line: 81
+Class: Opencart\System\Engine\Factory
+Function: controller
+
+Backtrace: 4
+File: /var/www/tennis/system/framework.php
+Line: 208
+Class: Opencart\System\Engine\Action
+Function: execute
+
+Backtrace: 5
+File: /var/www/tennis/index.php
+Line: 20
+Function: require_once
+2026-05-31 16:57:57 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:57:57 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:57:57 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:57:57 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:58:49 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:58:49 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 37
+2026-05-31 16:58:49 - PHP Warning:  Undefined array key "" in /var/www/tennis/catalog/controller/common/language.php on line 38
+2026-05-31 16:58:49 - PHP Warning:  Trying to access array offset on value of type null in /var/www/tennis/catalog/controller/common/language.php on line 38
