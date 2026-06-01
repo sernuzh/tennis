@@ -41,7 +41,20 @@ class SeoUrl extends \Opencart\System\Engine\Controller {
 						unset($parts[$key]);
 					}
 				}
+if (isset($this->request->get['article_id'])) {
+    $this->request->get['route'] = 'cms/blog.info';
+}
 
+if (isset($this->request->get['topic_id'])) {
+    $this->request->get['route'] = 'cms/blog';
+}
+if (isset($this->request->get['product_id'])) {
+    $this->request->get['route'] = 'product/product';
+}
+
+if (isset($this->request->get['category_id'])) {
+    $this->request->get['route'] = 'product/category';
+}
 				if (!isset($this->request->get['route'])) {
 					$this->request->get['route'] = $this->config->get('action_default');
 				}

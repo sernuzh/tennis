@@ -79,4 +79,25 @@ home 	route 	common/home 	0 - для домашньої сторінки
 Cmd - sudo a2enmod rewrite - sudo systemctl restart apache2
 
 
+https://chatgpt.com/share/6a1c7303-7e5c-83eb-be64-b38f9a54032e
+
+
+/var/www/tennis/catalog/controller/startup/seo_url.php
+44-57
+if (isset($this->request->get['product_id'])) {
+    $this->request->get['route'] = 'product/product';
+}
+
+if (isset($this->request->get['category_id'])) {
+    $this->request->get['route'] = 'product/category';
+}
+if (isset($this->request->get['article_id'])) {
+    $this->request->get['route'] = 'cms/blog.info';
+}
+
+if (isset($this->request->get['topic_id'])) {
+    $this->request->get['route'] = 'cms/blog';
+}
+
+
 
